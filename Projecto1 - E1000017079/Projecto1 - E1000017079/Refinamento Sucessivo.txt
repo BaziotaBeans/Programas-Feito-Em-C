@@ -1,0 +1,133 @@
+/******************************************************************************************************************************************************************8/
+Autor: Fábio Aristáteles Fernando Bazióta
+Id: 1000017079
+Descrição: Trabalho número 1
+Ficheiro:Refinamento Sucessivo.txt
+Data: 11/04/2017
+Objectivo: Mostrar os trocos em notas minimas
+Entrada: Valor da compra e o total a pagar
+Saida: o troco em notas minimas
+*****************************************************************************************************************************************************************/
+				Refinamento Sucessivo ou Analise
+
+Primeira Versão
+_______________
+- ler o valor da compra;
+- ler o total a pagar;
+- imprimir o troco;
+- imprimir o as quantidades minimas de notas e das moedas;
+*******************************************************************************************************************************************************************
+Segunda Versão
+_______________
+- declarar valC, totP, troco, nota1, nota2, nota3, moeda1, moeda2, moeda3;
+- declarar moeda4, cem, cin, vin, moeD, auxC, auxCin, auxV, auxMD, auxMC, auxMDD, nC, nCin, nV, mD, mDD, mCin, mU;
+- ler o valor da compra;
+- ler o total a pagar;
+- determinar troco;
+- determinar as quantidas minimas de notas e das moedas
+- imprimir o troco;
+- imprimir o as quantidades minimas de notas e das moedas;
+*******************************************************************************************************************************************************************
+Terceira Versão
+_______________
+- declarar valC, totP, troco, nota1, nota2, nota3, moeda1, moeda2, moeda3;
+- declarar moeda4, cem, cin, vin, moeD, auxC, auxCin, auxV, auxMD, auxMC, auxMDD, nC, nCin, nV, mD, mDD, mCin, mU;
+- ler o valor da compra;
+- ler o total a pagar;
+- calcular troco = totP - valC;                
+- calcular nC = troco/100;
+- calcular auxC = troco%100;
+- calcular nCin = auxC/50;
+- calcular auxCin = auxC%50;
+- calcular nV = auxCin/20;
+- calcular auxV = auxCin%20;
+- calcular mD = auxV/10;
+- calcular auxMD = auxV%10;
+- calcular mCin = auxMD/5;
+- calcular auxC = auxMD%5;
+- calcular mDD = auxC/2;
+- calcular auxMDD = auxC%2;
+- calcular mU = auxMDD/1;
+- imprimir o troco;
+- imprimir o as quantidades minimas de notas e das moedas;
+*******************************************************************************************************************************************************************
+Quarta Versão
+_______________
+- declarar valC, totP, troco, nota1, nota2, nota3, moeda1, moeda2, moeda3;
+- declarar moeda4, cem, cin, vin, moeD, auxC, auxCin, auxV, auxMD, auxMC, auxMDD, nC, nCin, nV, mD, mDD, mCin, mU;
+- ler o valor da compra;
+- ler o total a pagar;
+- calcular troco = totP - valC;                
+- calcular nC = troco/100;
+- calcular auxC = troco%100;
+- calcular nCin = auxC/50;
+- calcular auxCin = auxC%50;
+- calcular nV = auxCin/20;
+- calcular auxV = auxCin%20;
+- calcular mD = auxV/10;
+- calcular auxMD = auxV%10;
+- calcular mCin = auxMD/5;
+- calcular auxC = auxMD%5;
+- calcular mDD = auxC/2;
+- calcular auxMDD = auxC%2;
+- calcular mU = auxMDD/1;
+- imprimir o troco;
+- se valC for menor ou igual a totP
+-	inicio
+- 		imprimir o as quantidades minimas de notas e das moedas;
+-       fim
+-senão
+	imprimir Erro: valor da compra maior que o total pago pelo cliente;
+
+
+*******************************************************************************************************************************************************************
+Quinta e ultima Versão
+______________________
+- declarar valC, totP, troco, nota1, nota2, nota3, moeda1, moeda2, moeda3;
+- declarar moeda4, cem, cin, vin, moeD, auxC, auxCin, auxV, auxMD, auxMC, auxMDD, nC, nCin, nV, mD, mDD, mCin, mU;
+- ler o valor da compra;
+- ler o total a pagar;
+- calcular troco = totP - valC;                
+- calcular nC = troco/100;
+- calcular auxC = troco%100;
+- calcular nCin = auxC/50;
+- calcular auxCin = auxC%50;
+- calcular nV = auxCin/20;
+- calcular auxV = auxCin%20;
+- calcular mD = auxV/10;
+- calcular auxMD = auxV%10;
+- calcular mCin = auxMD/5;
+- calcular auxC = auxMD%5;
+- calcular mDD = auxC/2;
+- calcular auxMDD = auxC%2;
+- calcular mU = auxMDD/1;
+- imprimir o troco;
+
+- se valC for menor ou igual a totP
+-	inicio
+- 		se nC for diferente de 0
+			imprimir notas minima de 100;
+
+- 		se nCin for diferente de 0
+			imprimir notas minima de 50
+
+- 		se nV for diferente de 0
+			imprimir notas minima de 20
+
+- 		se mD for diferente de 0
+			imprimir moedas minimas de 10
+
+- 		se mCin for diferente de 0
+			imprimir moedas minimas de 5
+
+- 		se mDD for diferente de 0
+			imprimir moedas minimas de 2
+
+- 		se mU for diferente de 0
+			imprimir moedas minimas de 1
+
+-       fim
+-senão
+	imprimir Erro: valor da compra maior que o total pago pelo cliente;
+
+****************************************************************************************************************************************************************

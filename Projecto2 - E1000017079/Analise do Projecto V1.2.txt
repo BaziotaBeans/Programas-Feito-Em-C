@@ -1,0 +1,83 @@
+/*****************************************************************************************************************
+Autor: Fábio Baziota
+Data: 28/04/2017
+ficheiro: Analise do Projecto.txt
+Id: 1000017079
+Objectivo: Analise do Projecto
+	   Informatizar a folha de Salários de uma empresa
+*****************************************************************************************************************/
+caracteristicas:Code
+		número do trabalhador
+		número de horas trabalhadas durante o mês
+		turno:
+			  M = manhã
+			  T = Tarde
+			  N = Noturno
+		Categoria:
+			  
+			  C = Colaborador
+			  G = Gerente
+		Sexo
+		Idade do filho mais novo
+		Férias:
+			para 1 => Vai entrar de férias
+			para 0 => Não vai entrar de férias
+Requisitos principais:
+		
+		Ler dados do trabalhador sem a hora de trabalho
+		Se o trabalhador não tiver categorias e turno não processar
+		Lançar os dados com letra maiúscula
+.....................................................................................................................
+				TABELA DE SÁLARIOS
+.....................................................................................................................
+Sálario Minimo: 30.000,00 KWANZAS
+Horas de trabalhos mensais: 176 h
+................................Fórmulas a Usar......................................................................
+Sálario de base = Valor de hora trabalho * 176;
+.....................................................................................................................
+Se horasDo_trabalhador < 176
+	horaEM_falta => ausência e fazer o desconto.
+se sexoTrabalhador == 'F'
+	se idadeFilhos < 2
+		horasExtra = horaDetrabalho - 2h;
+se horasDo_trabalhador > 176
+	horasEmExcesso = horasDo_trabalhador - 172;
+	horasExtra = horasEmExcesso;
+	e serão pagas pelas entidades patronal
+
+Categoria Gerente = não tem direito a horasExtras
+	subsídio de produtividade = 12% * Sálario_de_base;
+.................................Subsídio de alimentação.............................................................
+se horasDo_trabalhador > 95% de horas estimulada pela lei
+
+	se Sálario_de_base <= 30.000,00
+		subAliment = Sálario_de_base + (30/100);
+	se Sálario_de_base >= 30.000,00
+		se Sálario_de_base >= 60.000,00
+			subAliment = Sálario_de_base + (20/100);
+	senão se Sálario_de_base >= 60.000,00
+		se Sálario_de_base <= 90.000,00
+			subAliment = Sálario_de_base + (10/100);
+	senão se Sálario_de_base >= 90.000,00
+		subAliment = Sálario_de_base + (5/100);
+.................................Subsídio de amamentação.................................................................
+se sexoTrabalhador == 'F'
+	se idadeFilhos < 2
+		se Sálario_de_base <= 30.000,00
+			subAliment = Sálario_de_base + (10/100);
+		se Sálario_de_base >= 30.000,00
+			se Sálario_de_base >= 60.000,00
+			subAliment = Sálario_de_base + (5/100);
+		senão se Sálario_de_base >= 60.000,00
+			se Sálario_de_base <= 90.000,00
+				subAliment = Sálario_de_base + (2/100);
+.....................................................................................................................
+salarioBruto = Sálario_de_base  + subAliment ;
+desconto_segurança_social= 8% do salario Bruto do trabalhador;
+subsídioFérias = 70% do salario de base;
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+		
+			
+		  
